@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Container, Typography } from '@mui/material';
+import { CircularProgress, Container, Typography } from '@mui/material';
 import { fetchFeedPosts } from '../api/api';
 import PostCard from '../components/PostCard';
 
@@ -12,15 +12,17 @@ const Feed = () => {
   };
 
   useEffect(() => {
-    // loadPosts();
-    // const interval = setInterval(loadPosts, 5000); // Poll every 5 sec
-    // return () => clearInterval(interval);
+    loadPosts();
   }, []);
 
   return (
     <Container>
-      <Typography variant="h4" gutterBottom>Live Feed</Typography>
-      {posts.map((post) => <PostCard key={post.id} post={post} />)}
+      <Typography variant="h4" gutterBottom>Latest Posts</Typography>
+      {loading ? (
+      <CircularProgress />
+    ) :(
+      posts.map((post) => <PostCard key={post.id} post={post} />)
+    )}
     </Container>
   );
 };

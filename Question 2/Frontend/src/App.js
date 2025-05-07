@@ -9,14 +9,14 @@ function App() {
     <Router>
       <AppBar position="static">
         <Toolbar>
-          <Button color="inherit" component={Link} to="/">Feed</Button>
+          <Button color="inherit" component={Link} to="/">Latest Posts</Button>
           <Button color="inherit" component={Link} to="/top-users">Top Users</Button>
-          <Button color="inherit" component={Link} to="/trending-posts">Trending</Button>
+          <Button color="inherit" component={Link} to="/trending-posts">Popular Posts</Button>
         </Toolbar>
       </AppBar>
       <Routes>
         <Route path="/" element={<Feed />} />
-        <Route path="/" element={<TopUsers />} />
+        <Route path="/top-users" element={<TopUsers />} />
         <Route path="/trending-posts" element={<TrendingPosts />} />
       </Routes>
     </Router>
