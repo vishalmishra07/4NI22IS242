@@ -4,8 +4,7 @@ const PostCard = ({ post }) => (
   <Card sx={{ mb: 2 }}>
     <CardMedia component="img" height="200" image={post.imageUrl} />
     <CardContent>
-      <Typography variant="h6">{post.title}</Typography>
-      <Typography variant="body2">By {post.author} | Comments: {post.commentCount}</Typography>
+      <Typography variant="h6">{post.content}</Typography>
     </CardContent>
   </Card>
 );
