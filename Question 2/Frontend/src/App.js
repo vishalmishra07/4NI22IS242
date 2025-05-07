@@ -15,7 +15,7 @@ function App() {
         </Toolbar>
       </AppBar>
       <Routes>
-        {/* <Route path="/" element={<Feed />} /> */}
+        <Route path="/" element={<Feed />} />
         <Route path="/" element={<TopUsers />} />
         <Route path="/trending-posts" element={<TrendingPosts />} />
       </Routes>
